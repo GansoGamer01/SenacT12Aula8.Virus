@@ -28,12 +28,38 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            btnVirus = new Button();
+            SuspendLayout();
+            // 
+            // btnVirus
+            // 
+            btnVirus.BackgroundImageLayout = ImageLayout.Stretch;
+            btnVirus.Font = new Font("Comic Sans MS", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnVirus.Image = (Image)resources.GetObject("btnVirus.Image");
+            btnVirus.Location = new Point(36, 23);
+            btnVirus.Name = "btnVirus";
+            btnVirus.Size = new Size(722, 576);
+            btnVirus.TabIndex = 0;
+            btnVirus.Text = "Receber Virus ";
+            btnVirus.UseVisualStyleBackColor = true;
+            btnVirus.Click += btnVirus_Click;
+            // 
+            // Form1
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackgroundImageLayout = ImageLayout.Stretch;
+            ClientSize = new Size(797, 633);
+            Controls.Add(btnVirus);
+            Name = "Form1";
+            Text = "Form1";
+            ResumeLayout(false);
         }
 
         #endregion
+
+        private Button btnVirus;
     }
 }
